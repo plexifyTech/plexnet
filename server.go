@@ -11,7 +11,7 @@ import (
 	"syscall"
 )
 
-func RunServer(ctx context.Context, engine *gin.Engine, config AppConfig) {
+func RunServer(ctx context.Context, engine *gin.Engine, config *AppConfig) {
 	server := &http.Server{
 		Addr:    ":" + config.Port,
 		Handler: engine,
