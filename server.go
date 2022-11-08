@@ -37,7 +37,6 @@ func RunServer(ctx context.Context, engine *gin.Engine, config *AppConfig) {
 func DefaultEngine() *gin.Engine {
 	gin.SetMode(gin.ReleaseMode)
 	engine := gin.New()
-	engine.Use(gin.Logger())
 	engine.Use(GinZeroLogger())
 	engine.Use(gin.Recovery())
 	engine.Use(cors.Default())
